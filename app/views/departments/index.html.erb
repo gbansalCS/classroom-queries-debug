@@ -1,4 +1,39 @@
-<h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target: Classroom Queries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <body>
+    <table style="width: 100%; margin-bottom: 3em;" border="1">
+      <tr>
+        <td>
+          <strong>Classroom</strong>
+        </td>
+
+        <td>
+          <a href="/courses">
+            Courses
+          </a>
+        </td>
+        
+        <td>
+          <a href="/departments">
+            Departments
+          </a>
+        </td>
+
+        <td>
+          <a href="/students">
+            Students
+          </a>
+        </td>
+      </tr>
+    </table>
+    <h1>
   List of all departments
 </h1>
 
@@ -34,23 +69,39 @@
     </th>
   </tr>
 
-  <% @departments.each do |department| %>
     <tr>
       <td>
-        <%= @department.id %>
+        65
       </td>
 
       <td>
-        <%= @department.name %>
+        English
       </td>
 
       <td>
-        <a href="/departments/<%= @department.id %>">
+        <a href="/departments/65">
           Show details
         </a>
       </td>
     </tr>
-  <% end %>
+    <tr>
+      <td>
+        66
+      </td>
+
+      <td>
+        Business
+      </td>
+
+      <td>
+        <a href="/departments/66">
+          Show details
+        </a>
+      </td>
+    </tr>
 </table>
 
 <hr>
+
+  </body>
+</html>

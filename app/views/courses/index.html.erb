@@ -1,4 +1,39 @@
-<h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target: Classroom Queries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <body>
+    <table style="width: 100%; margin-bottom: 3em;" border="1">
+      <tr>
+        <td>
+          <strong>Classroom</strong>
+        </td>
+
+        <td>
+          <a href="/courses">
+            Courses
+          </a>
+        </td>
+        
+        <td>
+          <a href="/departments">
+            Departments
+          </a>
+        </td>
+
+        <td>
+          <a href="/students">
+            Students
+          </a>
+        </td>
+      </tr>
+    </table>
+    <h1>
   List of all courses
 </h1>
 
@@ -10,7 +45,7 @@
       Title
     </label>
 
-    <input type="text" id="title_b" name="q_title">
+    <input type="text" id="title_box" name="query_title">
   </div>
 
   <div>
@@ -18,7 +53,7 @@
       Term offered
     </label>
 
-    <input type="text" id="term_offered_box" name="query_term">
+    <input type="text" id="term_offered_box" name="query_term_offered">
   </div>
 
   <div>
@@ -27,11 +62,12 @@
     </label>
 
     <select id="department_id_box" name="query_department_id">
-      <% Department.order({ :name => :asc }).each do |a_department| %>
-        <option value="<%= a_department.id %>">
-          <%= a_department.name %>
+        <option value="66">
+          Business
         </option>
-      <% end %>
+        <option value="65">
+          English
+        </option>
     </select>
   </div>
 
@@ -64,32 +100,170 @@
     </th>
   </tr>
 
-  <% @course.each do |course| %>
     <tr>
       <td>
-        <%= course.id %>
+        177
       </td>
 
       <td>
-        <%= course.title %>
+        
       </td>
 
       <td>
-        <%= course.term_offered %>
+        
       </td>
 
       <td>
-        <% department = department.where({ :id => course.department_id }).at(0) %>
-        <a href="/departments/<%= department.id %>"><%= department.name %></a>
+        <a href="/departments/66">Business</a>
       </td>
 
       <td>
-        <a href="/courses/<%= @course.id %>">
+        <a href="/courses/177">
           Show details
         </a>
       </td>
     </tr>
-  <% end %>
+    <tr>
+      <td>
+        120
+      </td>
+
+      <td>
+        Economics
+      </td>
+
+      <td>
+        Summer
+      </td>
+
+      <td>
+        <a href="/departments/66">Business</a>
+      </td>
+
+      <td>
+        <a href="/courses/120">
+          Show details
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        121
+      </td>
+
+      <td>
+        Product Management
+      </td>
+
+      <td>
+        Fall
+      </td>
+
+      <td>
+        <a href="/departments/66">Business</a>
+      </td>
+
+      <td>
+        <a href="/courses/121">
+          Show details
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        119
+      </td>
+
+      <td>
+        Composition
+      </td>
+
+      <td>
+        Spring
+      </td>
+
+      <td>
+        <a href="/departments/65">English</a>
+      </td>
+
+      <td>
+        <a href="/courses/119">
+          Show details
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        124
+      </td>
+
+      <td>
+        American Fiction
+      </td>
+
+      <td>
+        Summer
+      </td>
+
+      <td>
+        <a href="/departments/65">English</a>
+      </td>
+
+      <td>
+        <a href="/courses/124">
+          Show details
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        125
+      </td>
+
+      <td>
+        Individualizing Writing Instruction
+      </td>
+
+      <td>
+        Fall
+      </td>
+
+      <td>
+        <a href="/departments/65">English</a>
+      </td>
+
+      <td>
+        <a href="/courses/125">
+          Show details
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        122
+      </td>
+
+      <td>
+        Finance
+      </td>
+
+      <td>
+        Winter
+      </td>
+
+      <td>
+        <a href="/departments/66">Business</a>
+      </td>
+
+      <td>
+        <a href="/courses/122">
+          Show details
+        </a>
+      </td>
+    </tr>
 </table>
 
 <hr>
+
+  </body>
+</html>
